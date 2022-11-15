@@ -20,9 +20,9 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Produits</a>
                 <div class="dropdown-menu">
                     <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/add-produit">Ajouter</a>
-                    <a class="dropdown-item" routerLink="/produits">Lister</a>
-                    <a class="dropdown-item" routerLink="/rechercheParCategorie">Recherche Par Catégorie</a>
-                    <a class="dropdown-item" routerLink="/rechercheParNom">Recherche Par Nom</a>
+                    <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/produits">Lister</a>
+                    <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/rechercheParCategorie">Recherche Par Catégorie</a>
+                    <a *ngIf="authService.isAdmin()" class="dropdown-item" routerLink="/rechercheParNom">Recherche Par Nom</a>
                 </div>
             </li>
         </ul>
