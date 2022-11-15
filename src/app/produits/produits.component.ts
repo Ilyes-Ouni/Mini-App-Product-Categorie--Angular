@@ -19,20 +19,14 @@ export class ProduitsComponent implements OnInit {
     ngOnInit(): void {
       this.categories = this.produitService.listeCategories();
       this.produits = this.produitService.listeProduit()
-      // .subscribe(prods => {
-      //   console.log(prods);
-      //   this.produits = prods;
-      // });
     }
 
     supprimerProduit(p: any){
     let conf = confirm("Etes-vous sûr ?");
-      if (conf) this.produitService.supprimerProduit(p.idProduit)
-      this.produitService.produits.splice(p.idProduit -1, 1)
-      // .subscribe(() => {
-      //   console.log("produit supprimé");
-      //   this.SuprimerProduitDuTableau(p);
-      // });
+      if (conf){
+        this.produitService.supprimerProduit(p.idProduit)
+        this.produitService.produits.splice(p.idProduit -1, 1)
+      }
     }
 
     SuprimerProduitDuTableau(prod : Produit) {

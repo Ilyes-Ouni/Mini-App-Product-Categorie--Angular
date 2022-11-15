@@ -11,6 +11,8 @@ import { AddProduitComponent } from './add-produit/add-produit.component';
 import { UpdateProduitComponent } from './update-produit/update-produit.component';
 import { LoginInterfaceComponent } from './loginComponents/login-interface/login-interface.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     UpdateProduitComponent,
     LoginInterfaceComponent,
     ForbiddenComponent,
+    RechercheParCategorieComponent,
+    RechercheParNomComponent,
   ],
   imports: [
     BrowserModule,

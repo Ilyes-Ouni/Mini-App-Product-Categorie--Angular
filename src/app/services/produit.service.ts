@@ -77,4 +77,11 @@ export class ProduitService {
     return this.categories.find(cat => cat.idCat == id)!;
   }
 
+  rechercherParCategorie(idCat: number){
+    return this.produits.filter(prod => prod.categorie.idCat == idCat)!;
+  }
+
+  rechercherParNom(nom: string){
+    return this.produits.filter(prod => prod.nomProduit.toLowerCase() == nom.toLowerCase())!;
+  }
 }

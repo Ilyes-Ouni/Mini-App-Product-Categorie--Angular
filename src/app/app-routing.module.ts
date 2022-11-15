@@ -6,8 +6,12 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { LoginInterfaceComponent } from './loginComponents/login-interface/login-interface.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { ProduitGuard } from './produit.guard';
+import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 const routes: Routes = [
+  {path: "rechercheParNom", component : RechercheParNomComponent},
+  {path: "rechercheParCategorie", component : RechercheParCategorieComponent},
   {path: "login", component : LoginInterfaceComponent},
   {path : "add-produit", component : AddProduitComponent, canActivate:[ProduitGuard]},
   {path: 'app-forbidden', component: ForbiddenComponent},
